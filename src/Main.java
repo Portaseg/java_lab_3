@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -18,6 +19,29 @@ public class Main {
             d) wypisać wartości pól (za pomocą getterów),
             e) wywołać metody suma i róznica (obie wersje) z klasy punkt
         */
+//a)
+        Punkt punktA = new Punkt(7);
+        punktA.toString();
+        System.out.println("punktA: " + punktA);
+//b)
+        punktA = new Punkt(1, 2, 3);
+        punktA.toString();
+        System.out.println("\npunktA: " + punktA);
+//c)
+        punktA.setpX(100);
+        punktA.setpY(100);
+        punktA.setpZ(100);
 
+        punktA.toString();
+//d)
+        System.out.println("\npX: " + punktA.getpX() + "\npY: " + punktA.getpY() + "\npZ: " + punktA.getpZ());
+//e)
+        System.out.printf("\nx = %d, y = %d z = %d\n", punktA.getpX(), punktA.getpY(), punktA.getpZ());
+
+        System.out.println("\nsuma dla pkt A: " + punktA.suma());
+
+        System.out.println("r1 dla pkt A:" + punktA.roznica());
+
+        System.out.println("r2 dla pkt A:" + punktA.roznica(punktA.getpX(), punktA.getpY(), punktA.getpZ()));
     }
 }
